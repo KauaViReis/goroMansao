@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
+import TechSpecs from '../components/TechSpecs';
+import TerminalFaq from '../components/TerminalFaq';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -181,6 +183,9 @@ export default function Home() {
           </div>
         )}
       </div>
+
+      <TechSpecs />
+      <TerminalFaq />
     </div>
   );
 }

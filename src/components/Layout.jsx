@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import AgeVerification from './AgeVerification';
 
 const PageTransition = ({ children }) => {
   return (
@@ -21,6 +22,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="min-h-screen bg-black flex flex-col font-sans selection:bg-nvidia-green/30 selection:text-white">
+      <AgeVerification />
       <Navbar />
       <main className="flex-grow pt-24 bg-black">
         <AnimatePresence mode="wait">
