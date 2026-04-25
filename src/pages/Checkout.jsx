@@ -172,4 +172,25 @@ export default function Checkout() {
               {!user && (
                 <div className="mb-6 p-4 bg-true-black border border-border-gray text-gray-300 text-xs font-bold tracking-widest uppercase text-center">
                   AUTENTICAÇÃO NECESSÁRIA.{' '}
-                  <Link to="/login" className="text
+                  <Link to="/login" className="text-nvidia-green hover:underline">ENTRE AQUI</Link>.
+                </div>
+              )}
+
+              <button
+                onClick={handleCheckout}
+                disabled={loading}
+                className="w-full bg-nvidia-green hover:bg-[#5a8f00] disabled:bg-border-gray disabled:text-gray-400 text-true-black font-bold tracking-widest uppercase py-4 px-4 rounded-sm transition-colors flex justify-center items-center border-2 border-transparent disabled:border-border-gray"
+              >
+                {loading ? (
+                  <div className="animate-spin rounded-full h-5 w-5 border-2 border-true-black border-t-transparent"></div>
+                ) : (
+                  'INICIAR SEQUÊNCIA DE COMPRA'
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
